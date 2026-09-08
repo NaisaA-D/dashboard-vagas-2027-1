@@ -33,7 +33,7 @@
                     </div>
                     <div>
                         <h1 class="text-lg font-bold text-slate-900 leading-tight">Painel de Vagas & Inscritos</h1>
-                        <p class="text-xs text-slate-500">Vestibular & Processos Seletivos 2026/2</p>
+                        <p class="text-xs text-slate-500">Vestibular & Processos Seletivos 2027/1</p>
                     </div>
                 </div>
                 <div class="flex items-center space-x-3">
@@ -172,14 +172,17 @@
                                 <th class="py-3 px-2 text-center whitespace-nowrap border-l-2 border-slate-300 bg-slate-200/60 text-slate-800 font-black">Vagas Vest.</th>
                             </template>
                             <template x-if="tab === 'cebas'">
-                                <th class="py-3 px-2 text-center whitespace-nowrap">Vagas CEBAS</th>
+                                <th class="py-3 px-2 text-center whitespace-nowrap border-l-2 border-slate-300 bg-slate-200/60 text-slate-800 font-black">Vagas CEBAS</th>
                             </template>
                             <template x-if="tab === 'geral'">
                                 <th class="py-3 px-2 text-center whitespace-nowrap">Vagas Totais</th>
                             </template>
 
-                            <th class="py-3 px-2 text-center">Inscritos</th>
-                            
+                            <!-- Inscritos (oculto na aba CEBAS para manter agrupado na área demarcada) -->
+                            <template x-if="tab !== 'cebas'">
+                                <th class="py-3 px-2 text-center">Inscritos</th>
+                            </template>
+
                             <!-- Colunas Específicas Vestibular -->
                             <template x-if="tab === 'vestibular'">
                                 <th class="py-3 px-2 text-center border-l border-slate-200">Ingressantes Pagos</th>
@@ -192,18 +195,21 @@
                                 <th class="py-3 px-2 text-center whitespace-normal leading-tight text-red-700 font-extrabold bg-red-50/50">Vagas Restantes<br>na Turma</th>
                             </template>
 
-                            <!-- Colunas Específicas CEBAS (Convocados inserido aqui) -->
+                            <!-- Colunas Específicas CEBAS (Com Destaque Visual em Bloco) -->
                             <template x-if="tab === 'cebas'">
-                                <th class="py-3 px-2 text-center border-l border-slate-200">Convocados</th>
+                                <th class="py-3 px-2 text-center border-l border-slate-200">Inscritos CEBAS</th>
                             </template>
                             <template x-if="tab === 'cebas'">
-                                <th class="py-3 px-2 text-center">Matriculados</th>
+                                <th class="py-3 px-2 text-center border-l border-slate-200 bg-amber-100/60 text-amber-900 font-bold">Convocados</th>
                             </template>
                             <template x-if="tab === 'cebas'">
-                                <th class="py-3 px-2 text-center">Doc. Análise</th>
+                                <th class="py-3 px-2 text-center border-l border-slate-200 bg-emerald-100/60 text-emerald-900 font-bold">Matriculados</th>
                             </template>
                             <template x-if="tab === 'cebas'">
-                                <th class="py-3 px-2 text-center">Lista Espera</th>
+                                <th class="py-3 px-2 text-center border-l border-slate-200 bg-blue-100/60 text-blue-900 font-bold">Doc. Análise</th>
+                            </template>
+                            <template x-if="tab === 'cebas'">
+                                <th class="py-3 px-2 text-center border-l border-slate-200 border-r-2 border-slate-300 bg-slate-100/80 font-bold">Lista Espera</th>
                             </template>
 
                             <!-- Colunas Visão Geral Com Destaque Visual em Bloco -->
@@ -267,16 +273,18 @@
                                     <td class="py-2.5 px-2 text-center font-black text-slate-900 border-l-2 border-slate-300 bg-slate-100/50" x-text="item.vagasVestibular"></td>
                                 </template>
                                 <template x-if="tab === 'cebas'">
-                                    <td class="py-2.5 px-2 text-center font-semibold" x-text="item.vagasCebas"></td>
+                                    <td class="py-2.5 px-2 text-center font-black text-slate-900 border-l-2 border-slate-300 bg-slate-100/50" x-text="item.vagasCebas"></td>
                                 </template>
                                 <template x-if="tab === 'geral'">
                                     <td class="py-2.5 px-2 text-center font-bold text-slate-800" x-text="item.vagasVestibular + item.vagasCebas"></td>
                                 </template>
 
-                                <!-- Inscritos -->
-                                <td class="py-2.5 px-2 text-center font-medium text-slate-600">
-                                    <span x-text="tab === 'cebas' ? item.inscritosCebas : (tab === 'vestibular' ? item.inscritosVestibular : item.inscritosVestibular + item.inscritosCebas)"></span>
-                                </td>
+                                <!-- Inscritos (Não exibe na aba CEBAS pois possui célula própria formatada) -->
+                                <template x-if="tab !== 'cebas'">
+                                    <td class="py-2.5 px-2 text-center font-medium text-slate-600">
+                                        <span x-text="tab === 'vestibular' ? item.inscritosVestibular : item.inscritosVestibular + item.inscritosCebas"></span>
+                                    </td>
+                                </template>
 
                                 <!-- Vestibular Exclusivo -->
                                 <template x-if="tab === 'vestibular'">
@@ -291,18 +299,21 @@
                                     <td class="py-2.5 px-2 text-center font-bold text-red-600 bg-red-50/20" x-text="item.vagasRestantes"></td>
                                 </template>
 
-                                <!-- CEBAS Exclusivo (Convocados inserido aqui) -->
+                                <!-- CEBAS Exclusivo (Com Destaque Visual em Bloco) -->
                                 <template x-if="tab === 'cebas'">
-                                    <td class="py-2.5 px-2 text-center border-l border-slate-200" x-text="item.convocados"></td>
+                                    <td class="py-2.5 px-2 text-center border-l border-slate-200 font-medium text-slate-600" x-text="item.inscritosCebas"></td>
                                 </template>
                                 <template x-if="tab === 'cebas'">
-                                    <td class="py-2.5 px-2 text-center font-semibold text-emerald-600" x-text="item.matriculadosCebas"></td>
+                                    <td class="py-2.5 px-2 text-center border-l border-slate-200 font-bold text-amber-700 bg-amber-50/30" x-text="item.convocados"></td>
                                 </template>
                                 <template x-if="tab === 'cebas'">
-                                    <td class="py-2.5 px-2 text-center text-amber-600" x-text="item.docAnaliseCebas"></td>
+                                    <td class="py-2.5 px-2 text-center border-l border-slate-200 font-bold text-emerald-700 bg-emerald-50/30" x-text="item.matriculadosCebas"></td>
                                 </template>
                                 <template x-if="tab === 'cebas'">
-                                    <td class="py-2.5 px-2 text-center text-slate-500" x-text="item.listaEsperaCebas"></td>
+                                    <td class="py-2.5 px-2 text-center border-l border-slate-200 font-bold text-blue-700 bg-blue-50/30" x-text="item.docAnaliseCebas"></td>
+                                </template>
+                                <template x-if="tab === 'cebas'">
+                                    <td class="py-2.5 px-2 text-center border-l border-slate-200 border-r-2 border-slate-300 font-medium text-slate-500 bg-slate-50/50" x-text="item.listaEsperaCebas"></td>
                                 </template>
 
                                 <!-- Geral Exclusivo -->
