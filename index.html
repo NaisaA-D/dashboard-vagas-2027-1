@@ -180,12 +180,9 @@
 
                             <th class="py-3 px-2 text-center">Inscritos</th>
                             
-                            <!-- Colunas Específicas Vestibular com Demarcação Reforçada -->
+                            <!-- Colunas Específicas Vestibular -->
                             <template x-if="tab === 'vestibular'">
-                                <th class="py-3 px-2 text-center border-l border-slate-200">Convocados</th>
-                            </template>
-                            <template x-if="tab === 'vestibular'">
-                                <th class="py-3 px-2 text-center">Ingressantes Pagos</th>
+                                <th class="py-3 px-2 text-center border-l border-slate-200">Ingressantes Pagos</th>
                             </template>
                             <template x-if="tab === 'vestibular'">
                                 <th class="py-3 px-2 text-center border-r-2 border-slate-300">Limite Turma</th>
@@ -195,7 +192,10 @@
                                 <th class="py-3 px-2 text-center whitespace-normal leading-tight text-red-700 font-extrabold bg-red-50/50">Vagas Restantes<br>na Turma</th>
                             </template>
 
-                            <!-- Colunas Específicas CEBAS -->
+                            <!-- Colunas Específicas CEBAS (Convocados inserido aqui) -->
+                            <template x-if="tab === 'cebas'">
+                                <th class="py-3 px-2 text-center border-l border-slate-200">Convocados</th>
+                            </template>
                             <template x-if="tab === 'cebas'">
                                 <th class="py-3 px-2 text-center">Matriculados</th>
                             </template>
@@ -278,12 +278,9 @@
                                     <span x-text="tab === 'cebas' ? item.inscritosCebas : (tab === 'vestibular' ? item.inscritosVestibular : item.inscritosVestibular + item.inscritosCebas)"></span>
                                 </td>
 
-                                <!-- Vestibular Exclusivo com Demarcações -->
+                                <!-- Vestibular Exclusivo -->
                                 <template x-if="tab === 'vestibular'">
-                                    <td class="py-2.5 px-2 text-center border-l border-slate-200" x-text="item.convocados"></td>
-                                </template>
-                                <template x-if="tab === 'vestibular'">
-                                    <td class="py-2.5 px-2 text-center font-semibold text-emerald-600" x-text="item.ingressantesPagos"></td>
+                                    <td class="py-2.5 px-2 text-center font-semibold text-emerald-600 border-l border-slate-200" x-text="item.ingressantesPagos"></td>
                                 </template>
                                 <template x-if="tab === 'vestibular'">
                                     <td class="py-2.5 px-2 text-center text-slate-500 font-medium border-r-2 border-slate-300" x-text="item.limiteTurma"></td>
@@ -294,7 +291,10 @@
                                     <td class="py-2.5 px-2 text-center font-bold text-red-600 bg-red-50/20" x-text="item.vagasRestantes"></td>
                                 </template>
 
-                                <!-- CEBAS Exclusivo -->
+                                <!-- CEBAS Exclusivo (Convocados inserido aqui) -->
+                                <template x-if="tab === 'cebas'">
+                                    <td class="py-2.5 px-2 text-center border-l border-slate-200" x-text="item.convocados"></td>
+                                </template>
                                 <template x-if="tab === 'cebas'">
                                     <td class="py-2.5 px-2 text-center font-semibold text-emerald-600" x-text="item.matriculadosCebas"></td>
                                 </template>
@@ -513,7 +513,7 @@
                         const vagas = list.reduce((sum, item) => sum + item.vagasVestibular, 0);
                         const inscricoes = list.reduce((sum, item) => sum + item.inscritosVestibular, 0);
                         const pagos = list.reduce((sum, item) => sum + item.ingressantesPagos, 0);
-                        const convocados = list.reduce((sum, item) => sum + item.convocados, 0);
+                        const limiteTotal = list.reduce((sum, item) => sum + item.limiteTurma, 0);
                         const demanda = vagas > 0 ? (inscricoes / vagas).toFixed(1) : '0';
                         const metaVestibular = 680;
                         const pctMeta = Math.round((pagos / metaVestibular) * 100);
@@ -527,16 +527,16 @@
                             sucessoLabel: 'Matrículas Pagas',
                             sucessoValor: pagos.toLocaleString('pt-BR'),
                             taxaSucesso: `${pctMeta}% de ${metaVestibular} (Meta)`,
-                            apoioLabel: 'Convocados',
-                            apoioValor: convocados.toLocaleString('pt-BR'),
-                            apoioSub: 'Aguardando ação'
+                            apoioLabel: 'Capacidade Turmas',
+                            apoioValor: limiteTotal.toLocaleString('pt-BR'),
+                            apoioSub: 'Limite de vagas'
                         };
 
                     } else if (this.tab === 'cebas') {
                         const vagas = list.reduce((sum, item) => sum + item.vagasCebas, 0);
                         const inscricoes = list.reduce((sum, item) => sum + item.inscritosCebas, 0);
                         const matriculados = list.reduce((sum, item) => sum + item.matriculadosCebas, 0);
-                        const listaEspera = list.reduce((sum, item) => sum + item.listaEsperaCebas, 0);
+                        const convocados = list.reduce((sum, item) => sum + item.convocados, 0);
                         const demanda = vagas > 0 ? (inscricoes / vagas).toFixed(1) : '0';
                         const taxaSucesso = inscricoes > 0 ? Math.round((matriculados / inscricoes) * 100) : 0;
 
@@ -549,9 +549,9 @@
                             sucessoLabel: 'Matriculados',
                             sucessoValor: matriculados.toLocaleString('pt-BR'),
                             taxaSucesso: `${taxaSucesso}% de aproveitamento`,
-                            apoioLabel: 'Em Lista de Espera',
-                            apoioValor: listaEspera.toLocaleString('pt-BR'),
-                            apoioSub: 'Aguardando vaga'
+                            apoioLabel: 'Convocados',
+                            apoioValor: convocados.toLocaleString('pt-BR'),
+                            apoioSub: 'Aguardando ação'
                         };
 
                     } else if (this.tab === 'geral') {
@@ -597,6 +597,10 @@
                     }
                 }
             };
+        }
+    </script>
+</body>
+</html>
         }
     </script>
 </body>
