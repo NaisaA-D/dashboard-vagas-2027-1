@@ -76,6 +76,7 @@
 
         <!-- KPI Cards Dynamic Header -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8" x-data="{ kpis: getKpis() }" x-effect="kpis = getKpis()">
+
             <!-- KPI 1: Vagas Totais -->
             <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
                 <div class="flex items-center justify-between mb-2">
@@ -541,26 +542,28 @@
                         };
 
                     } else if (this.tab === 'cebas') {
-                        const vagas = list.reduce((sum, item) => sum + item.vagasCebas, 0);
-                        const inscricoes = list.reduce((sum, item) => sum + item.inscritosCebas, 0);
-                        const matriculados = list.reduce((sum, item) => sum + item.matriculadosCebas, 0);
-                        const convocados = list.reduce((sum, item) => sum + item.convocados, 0);
-                        const demanda = vagas > 0 ? (inscricoes / vagas).toFixed(1) : '0';
-                        const taxaSucesso = inscricoes > 0 ? Math.round((matriculados / inscricoes) * 100) : 0;
+    const vagas = list.reduce((sum, item) => sum + item.vagasCebas, 0);
+    const inscricoes = list.reduce((sum, item) => sum + item.inscritosCebas, 0);
+    const matriculados = list.reduce((sum, item) => sum + item.matriculadosCebas, 0);
+    const convocados = list.reduce((sum, item) => sum + item.convocados, 0);
+    const demanda = vagas > 0 ? (inscricoes / vagas).toFixed(1) : '0';
+    const taxaSucesso = inscricoes > 0 ? Math.round((matriculados / inscricoes) * 100) : 0;
 
-                        return {
-                            vagas: vagas.toLocaleString('pt-BR'),
-                            vagasSub: 'Bolsas CEBAS',
-                            vagasRestantesTotal: totalVagasRestantes.toLocaleString('pt-BR'),
-                            inscricoes: inscricoes.toLocaleString('pt-BR'),
-                            demanda: `${demanda}x cand / vaga`,
-                            sucessoLabel: 'Matriculados',
-                            sucessoValor: matriculados.toLocaleString('pt-BR'),
-                            taxaSucesso: `${taxaSucesso}% de aproveitamento`,
-                            apoioLabel: 'Convocados',
-                            apoioValor: convocados.toLocaleString('pt-BR'),
-                            apoioSub: 'Aguardando ação'
-                        };
+    const vagasRestantesCebas = vagas - matriculados;
+
+    return {
+        vagas: vagas.toLocaleString('pt-BR'),
+        vagasSub: 'Bolsas CEBAS',
+        vagasRestantesTotal: vagasRestantesCebas.toLocaleString('pt-BR'),
+        inscricoes: inscricoes.toLocaleString('pt-BR'),
+        demanda: `${demanda}x cand / vaga`,
+        sucessoLabel: 'Matriculados',
+        sucessoValor: matriculados.toLocaleString('pt-BR'),
+        taxaSucesso: `${taxaSucesso}% de aproveitamento`,
+        apoioLabel: 'Convocados',
+        apoioValor: convocados.toLocaleString('pt-BR'),
+        apoioSub: 'Aguardando ação'
+    };  
 
                     } else if (this.tab === 'geral') {
                         const vagasTotalCalculado = list.reduce((sum, item) => sum + (item.vagasVestibular + item.vagasCebas), 0);
