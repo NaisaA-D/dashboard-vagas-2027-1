@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "16/09/2026 16:31",
+  "lastUpdated": "16/09/2026 16:39",
   "vagasList": [
     {
       "Curso": "Administração (Bacharelado)",
@@ -71,7 +71,8 @@
       "Limite de alunos na sala/turma": 65,
       "Limite Turma": 65,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Análise e Desenvolvimento de Sistemas (Tecnólogo)",
@@ -143,7 +144,8 @@
       "Limite de alunos na sala/turma": 52,
       "Limite Turma": 52,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Análise e Desenvolvimento de Sistemas (Tecnólogo)",
@@ -215,7 +217,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 1
     },
     {
       "Curso": "Arquitetura e Urbanismo (Bacharelado)",
@@ -287,7 +290,8 @@
       "Limite de alunos na sala/turma": 65,
       "Limite Turma": 65,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Biomedicina (Bacharelado)",
@@ -359,7 +363,8 @@
       "Limite de alunos na sala/turma": 52,
       "Limite Turma": 52,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 2
     },
     {
       "Curso": "Biomedicina (Bacharelado)",
@@ -431,7 +436,8 @@
       "Limite de alunos na sala/turma": 53,
       "Limite Turma": 53,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 2
     },
     {
       "Curso": "Ciência da Computação (Bacharelado)",
@@ -503,7 +509,8 @@
       "Limite de alunos na sala/turma": 68,
       "Limite Turma": 68,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Ciência da Computação (Bacharelado)",
@@ -575,7 +582,8 @@
       "Limite de alunos na sala/turma": 62,
       "Limite Turma": 62,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 1
     },
     {
       "Curso": "Ciência de Dados e Inteligência Artificial (Bacharelado)",
@@ -647,7 +655,8 @@
       "Limite de alunos na sala/turma": 55,
       "Limite Turma": 55,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Ciência de Dados e Inteligência Artificial (Bacharelado)",
@@ -719,7 +728,8 @@
       "Limite de alunos na sala/turma": 65,
       "Limite Turma": 65,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 1
     },
     {
       "Curso": "Ciências Biológicas (Bacharelado)",
@@ -791,7 +801,8 @@
       "Limite de alunos na sala/turma": 0,
       "Limite Turma": 0,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Ciências Biológicas (Bacharelado)",
@@ -863,7 +874,8 @@
       "Limite de alunos na sala/turma": 55,
       "Limite Turma": 55,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 2
     },
     {
       "Curso": "Ciências Contábeis (Bacharelado)",
@@ -935,7 +947,8 @@
       "Limite de alunos na sala/turma": 65,
       "Limite Turma": 65,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Ciências Econômicas (Bacharelado)",
@@ -1007,7 +1020,8 @@
       "Limite de alunos na sala/turma": 65,
       "Limite Turma": 65,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Design (Bacharelado)",
@@ -1079,7 +1093,8 @@
       "Limite de alunos na sala/turma": 60,
       "Limite Turma": 60,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Direito (Bacharelado)",
@@ -1151,7 +1166,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Direito (Bacharelado)",
@@ -1223,7 +1239,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Enfermagem (Bacharelado)",
@@ -1295,7 +1312,8 @@
       "Limite de alunos na sala/turma": 50,
       "Limite Turma": 50,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Enfermagem (Bacharelado)",
@@ -1367,7 +1385,8 @@
       "Limite de alunos na sala/turma": 50,
       "Limite Turma": 50,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Engenharia (Bacharelado)",
@@ -1439,7 +1458,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Engenharia (Bacharelado)",
@@ -1511,7 +1531,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 2
     },
     {
       "Curso": "Engenharia de Software (Bacharelado)",
@@ -1583,7 +1604,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Engenharia de Software (Bacharelado)",
@@ -1655,7 +1677,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Gestão de Negócios Imobiliários (Tecnólogo)",
@@ -1727,7 +1750,8 @@
       "Limite de alunos na sala/turma": 140,
       "Limite Turma": 140,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Gestão de Recursos Humanos (Tecnólogo)",
@@ -1799,7 +1823,8 @@
       "Limite de alunos na sala/turma": 140,
       "Limite Turma": 140,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 1
     },
     {
       "Curso": "Gestão de Segurança Privada (Tecnólogo)",
@@ -1871,7 +1896,8 @@
       "Limite de alunos na sala/turma": 140,
       "Limite Turma": 140,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Gestão Pública (Tecnólogo)",
@@ -1943,7 +1969,8 @@
       "Limite de alunos na sala/turma": 140,
       "Limite Turma": 140,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Gestão da Tecnologia da Informação (Tecnólogo)",
@@ -2015,7 +2042,8 @@
       "Limite de alunos na sala/turma": 60,
       "Limite Turma": 60,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Marketing (Tecnólogo)",
@@ -2087,7 +2115,8 @@
       "Limite de alunos na sala/turma": 55,
       "Limite Turma": 55,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Marketing (Tecnólogo)",
@@ -2159,7 +2188,8 @@
       "Limite de alunos na sala/turma": 140,
       "Limite Turma": 140,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 1
     },
     {
       "Curso": "Pedagogia (Licenciatura)",
@@ -2231,7 +2261,8 @@
       "Limite de alunos na sala/turma": 210,
       "Limite Turma": 210,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 2
     },
     {
       "Curso": "Psicologia (Bacharelado)",
@@ -2303,7 +2334,8 @@
       "Limite de alunos na sala/turma": 55,
       "Limite Turma": 55,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 1
     },
     {
       "Curso": "Psicologia (Bacharelado)",
@@ -2375,7 +2407,8 @@
       "Limite de alunos na sala/turma": 55,
       "Limite Turma": 55,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Publicidade e Propaganda (Bacharelado)",
@@ -2447,7 +2480,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Química (Bacharelado)",
@@ -2519,7 +2553,8 @@
       "Limite de alunos na sala/turma": 70,
       "Limite Turma": 70,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Relações Internacionais (Bacharelado)",
@@ -2591,7 +2626,8 @@
       "Limite de alunos na sala/turma": 69,
       "Limite Turma": 69,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Segurança da Informação (Tecnólogo)",
@@ -2663,7 +2699,8 @@
       "Limite de alunos na sala/turma": 55,
       "Limite Turma": 55,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 1
     },
     {
       "Curso": "Sistemas de Informação (Bacharelado)",
@@ -2735,7 +2772,8 @@
       "Limite de alunos na sala/turma": 60,
       "Limite Turma": 60,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Terapia Ocupacional (Bacharelado)",
@@ -2807,7 +2845,8 @@
       "Limite de alunos na sala/turma": 53,
       "Limite Turma": 53,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Terapia Ocupacional (Bacharelado)",
@@ -2879,7 +2918,8 @@
       "Limite de alunos na sala/turma": 53,
       "Limite Turma": 53,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     },
     {
       "Curso": "Totais",
@@ -2951,7 +2991,8 @@
       "Limite de alunos na sala/turma": 2937,
       "Limite Turma": 2937,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 17
     },
     {
       "Curso": "Ultima atualização: 16/09/2026 16:28:49",
@@ -3023,7 +3064,8 @@
       "Limite de alunos na sala/turma": 0,
       "Limite Turma": 0,
       "Cancelamento Vestibular": 0,
-      "Cancelados": 0
+      "Cancelados": 0,
+      "Ingressantes Pagos": 0
     }
   ]
 }
