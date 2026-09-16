@@ -519,28 +519,31 @@
                     const totalVagasRestantes = list.reduce((sum, item) => sum + item.vagasRestantes, 0);
 
                     if (this.tab === 'vestibular') {
-                        const vagas = list.reduce((sum, item) => sum + item.vagasVestibular, 0);
-                        const inscricoes = list.reduce((sum, item) => sum + item.inscritosVestibular, 0);
-                        const pagos = list.reduce((sum, item) => sum + item.ingressantesPagos, 0);
-                        const limiteTotal = list.reduce((sum, item) => sum + item.limiteTurma, 0);
-                        const demanda = vagas > 0 ? (inscricoes / vagas).toFixed(1) : '0';
-                        const metaVestibular = 2000;
-                        const pctMeta = Math.round((pagos / metaVestibular) * 100);
+    const vagas = list.reduce((sum, item) => sum + item.vagasVestibular, 0);
+    const inscricoes = list.reduce((sum, item) => sum + item.inscritosVestibular, 0);
+    const pagos = list.reduce((sum, item) => sum + item.ingressantesPagos, 0);
+    const limiteTotal = list.reduce((sum, item) => sum + item.limiteTurma, 0);
+    const demanda = vagas > 0 ? (inscricoes / vagas).toFixed(1) : '0';
+    const metaVestibular = 2000;
+    const pctMeta = Math.round((pagos / metaVestibular) * 100);
 
-                        return {
-                            vagas: vagas.toLocaleString('pt-BR'),
-                            vagasSub: 'Vestibular Tradicional',
-                            vagasRestantesTotal: totalVagasRestantes.toLocaleString('pt-BR'),
-                            inscricoes: inscricoes.toLocaleString('pt-BR'),
-                            demanda: `${demanda}x cand / vaga`,
-                            sucessoLabel: 'Matrículas Pagas',
-                            sucessoValor: pagos.toLocaleString('pt-BR'),
-                            taxaSucesso: `${pctMeta}% de ${metaVestibular} (Meta)`,
-                            apoioLabel: 'Capacidade Turmas',
-                            apoioValor: limiteTotal.toLocaleString('pt-BR'),
-                            apoioSub: 'Limite de vagas'
-                        };
+    // Calcula 2.000 (meta) menos as Matrículas Pagas
+    const vagasRestantesVestibular = metaVestibular - pagos;
 
+    return {
+        vagas: vagas.toLocaleString('pt-BR'),
+        vagasSub: 'Vestibular Tradicional',
+        vagasRestantesTotal: vagasRestantesVestibular.toLocaleString('pt-BR'),
+        inscricoes: inscricoes.toLocaleString('pt-BR'),
+        demanda: `${demanda}x cand / vaga`,
+        sucessoLabel: 'Matrículas Pagas',
+        sucessoValor: pagos.toLocaleString('pt-BR'),
+        taxaSucesso: `${pctMeta}% de ${metaVestibular} (Meta)`,
+        apoioLabel: 'Capacidade Turmas',
+        apoioValor: limiteTotal.toLocaleString('pt-BR'),
+        apoioSub: 'Limite de vagas'
+    };
+                        
                     } else if (this.tab === 'cebas') {
     const vagas = list.reduce((sum, item) => sum + item.vagasCebas, 0);
     const inscricoes = list.reduce((sum, item) => sum + item.inscritosCebas, 0);
