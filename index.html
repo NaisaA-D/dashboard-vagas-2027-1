@@ -526,7 +526,7 @@
                         const pagos = list.reduce((sum, item) => sum + item.ingressantesPagos, 0);
                         const limiteTotal = list.reduce((sum, item) => sum + item.limiteTurma, 0);
                         const demanda = vagas > 0 ? (inscricoes / vagas).toFixed(1) : '0';
-                        const metaVestibular = 2.000;
+                        const metaVestibular = 2000;
                         const pctMeta = Math.round((pagos / metaVestibular) * 100);
 
                         return {
